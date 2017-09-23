@@ -46,7 +46,7 @@ void ChangeFD(int old_fd, int new_fd){
 }
 
 void SettingsLastCommand( ){
-       int fd = open("/home/dm/unix_1/result.out", O_RDWR | O_CREAT, 0777);
+       int fd = open("/home/dm/unix_1/result.out", O_RDWR | O_CREAT| O_TRUNC, 0777);
        if (fd ==-1) {    
            std::cerr <<"ERROR: file not open\n";
            exit(1);
