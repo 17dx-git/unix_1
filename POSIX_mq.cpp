@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
@@ -6,7 +6,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <mqueue.h>
-//#include <cerrno>
+//#include <cerrno> g++ -lrt
 
 
 const int MSG_MAXSIZE=1024;
