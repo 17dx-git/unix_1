@@ -4,6 +4,7 @@
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
+//ipcs -s
 
 const int SEMS_COUNT=16;
 
