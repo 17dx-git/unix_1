@@ -6,7 +6,7 @@
 #include <sys/shm.h>
 
 
-const int MEM_SIZE = 1024;
+const int MEM_SIZE = 1024*1024;
 int main()
 {
     key_t key = ftok("/tmp/mem.temp", 1);
