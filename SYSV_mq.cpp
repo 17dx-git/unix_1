@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -33,10 +33,9 @@ int main(){
     long msgtyp = 0; //get any
     msgflg =0;   
     struct message { long mtype; char mtext[80]; } msg;
-    while ((n = msgrcv(msqid, &msg, sizeof(msg), msgtyp, msgflg ) ) >= 0) {
-       //buff[n] = '\0';       
+    while ((n = msgrcv(msqid, &msg, sizeof(msg), msgtyp, msgflg ) ) >= 0) {      
        std::cout << "i recive\n";
-       write(fd, msg.mtext, 80);
+       write(fd, msg.mtext, strlen(msg.mtext)-1);
     }
     perror("recive");
     close(fd);
